@@ -1,68 +1,95 @@
 body {
     margin: 0;
-    height: 100vh;
     width: 100%;
-    overflow: hidden;
     font-family: "Montserrat", sans-serif;
     background-color: black;
     color: white;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .app-layout {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     padding: 0.5rem;
 }
 
 .top-bar {
-    position: fixed;
-    top: 0;
     width: 100%;
     height: 65px;
-    background-color: black;
+    background-color: #000000;
+    flex-shrink: 0;
+}
+
+.middle-bar {
+    display: flex;
+    flex: 1;
+    gap: 0.5rem;
+    min-height: 0; 
 }
 
 .sidebar {
-    margin: 65px 0.20rem 7rem 0.20rem;
-    width: 360px;
+    width: 390px;
+    flex-shrink: 0;
     background-color: #121212;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .content {
-    margin: 65px 0.20rem 7rem 0.20rem;
     flex-grow: 1;
     background-color: #121212;
-    overflow: auto;
-    border-radius: 1rem;
+    overflow-y: hidden;
+    border-radius: 0.5rem;
+    min-height: 0; 
 }
+
+.content-scroll {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.content-scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.35);
+}
+
 
 .player-bar {
-    position: fixed;
-    bottom: 0.5rem;
     height: 80px;
-    width: 100%;
-    background-color: brown;
-    padding: 0.5rem;
-    border-radius: 1rem;
+    flex-shrink: 0;
 }
 
-.sidebar .head {
-    height: 5rem;
+.player-bar aside{
+    margin: 0.5rem 0;
+    background-image: linear-gradient(90deg, #af2896, #509bf5);
+    border-radius: 0.5rem;
+    height: 100%;
 }
 
 .sidebar .library {
     padding: 1rem 1rem 0.5rem;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .6);
+    z-index: 1;
+    padding-bottom: 20px;
 }
 
-.sidebar .library-header {
+.library-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .library-title {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .library-add-btn {
@@ -88,4 +115,125 @@ body {
 
 .library-add-btn :active {
     background-color: #000000;
+}
+
+.sidebar .library-content{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.library-content .box-music {
+    overflow: hidden;
+    min-height: 0;
+    border-radius: 0.5rem;
+    height: 170px;
+    margin-bottom: 25px;
+}
+
+.library-content .playlist {
+    height: 125px;
+    background-color: #1f1f1f;
+    border-radius: 0.5rem;
+    margin: 10px 0;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.library-content .playlist-content{
+    line-height: 1.7;
+}
+
+.library-content .playlist-content .title{
+    font-weight: 700;
+}
+
+.library-content .playlist-content .desc{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.playlist-add-btn button{
+    padding: 8px 16px;
+    background-color: #ffffff;
+    color: #121212;
+    border-radius: 1rem;
+    font-size: 14px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    line-height: 1;
+    will-change: transform; 
+}
+
+.playlist-add-btn button:hover{
+    transform: scale(1.05);
+}
+
+.playlist-add-btn button:active{
+    opacity: 0.8;
+}
+
+.library-footer .legal-links{
+    margin: 32px 0;
+    padding: 0 24px;
+}
+
+.library-footer .links-container{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 2.5;
+    opacity: 0.7;
+}
+
+.library-footer .links-container .link{
+    font-size: 11px;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.library-footer .legal-links >a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.library-footer .legal-links >a:hover{
+    text-decoration: underline;
+}
+
+.library-footer .language-selection{
+    margin: 0 0 32px;
+    padding: 0 24px;
+}
+
+.language-selection button{
+    border-radius: 1.5rem;
+    border: 2px solid #ffffff66;
+    background: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 4px 14px 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.language-selection button:hover{
+    transform: scale(1.05);
+    border: 2px solid #ffffff;
+}
+
+.language-selection button:active{
+    border: 2px solid #ffffff66;
 }
