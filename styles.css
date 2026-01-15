@@ -27,7 +27,7 @@ body {
     display: flex;
     flex: 1;
     gap: 0.5rem;
-    min-height: 0; 
+    min-height: 0;
 }
 
 .sidebar {
@@ -35,8 +35,8 @@ body {
     flex-shrink: 0;
     background-color: #121212;
     border-radius: 0.5rem;
-    display: flex;             
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     min-height: 0;
 }
 
@@ -45,7 +45,7 @@ body {
     background-color: #121212;
     overflow-y: hidden;
     border-radius: 0.5rem;
-    min-height: 0; 
+    min-height: 0;
 }
 
 .content-scroll {
@@ -63,7 +63,7 @@ body {
 }
 
 .content-scroll::-webkit-scrollbar-thumb {
-    background-color: rgba(255,255,255,0.35);
+    background-color: rgba(255, 255, 255, 0.35);
 }
 
 .sidebar .library {
@@ -109,7 +109,7 @@ body {
     background-color: #000000;
 }
 
-.sidebar .library-content{
+.sidebar .library-content {
     display: flex;
     flex-direction: column;
     padding: 0 0.5rem 0.5rem 0.5rem;
@@ -120,6 +120,7 @@ body {
 .library-content .box-music {
     overflow-y: auto;
     min-height: 0;
+    max-height: 150px;
     border-radius: 0.5rem;
     flex: 1;
 }
@@ -135,20 +136,20 @@ body {
     justify-content: space-around;
 }
 
-.library-content .playlist-content{
+.library-content .playlist-content {
     line-height: 1.7;
 }
 
-.library-content .playlist-content .title{
+.library-content .playlist-content .title {
     font-weight: 700;
 }
 
-.library-content .playlist-content .desc{
+.library-content .playlist-content .desc {
     font-size: 14px;
     font-weight: 400;
 }
 
-.playlist-add-btn button, .signup-bar button{
+.btn {
     padding: 8px 16px;
     background-color: #ffffff;
     color: #121212;
@@ -156,58 +157,64 @@ body {
     font-size: 14px;
     font-weight: 700;
     border: none;
-    outline: none;
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     transition: transform 0.2s ease;
-    line-height: 1;
-    will-change: transform; 
 }
 
-.playlist-add-btn button:hover, .signup-bar button:hover{
+.btn:hover {
     transform: scale(1.05);
 }
 
-.playlist-add-btn button:active, .signup-bar button:active{
+.btn:active {
     opacity: 0.8;
 }
 
-.library-footer .legal-links{
-    margin: 35px 0 12px 0;
-    padding: 0 20px;
-    line-height: 2.5;
+.btn--large {
+    padding: 16px 26px;
+    border-radius: 2rem;
+    font-weight: 800;
 }
 
-.library-footer .links-container{
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 35px 0;
+    gap: 18px;
+}
+
+.footer-links__list {
     display: flex;
     flex-wrap: wrap;
+    gap: 18px;
     opacity: 0.7;
+    padding: 0 18px;
 }
 
-.library-footer .links-container .link{
+.footer-links__item {
     font-size: 11px;
-    margin-right: 18px;
     white-space: nowrap;
 }
 
-.library-footer .legal-links >a{
+.footer-links__external {
     font-size: 12px;
+    color: #fff;
     text-decoration: none;
-    color: #ffffff;
+    padding: 12px 18px;
 }
 
-.library-footer .legal-links >a:hover{
+.footer-links__external:hover {
     text-decoration: underline;
 }
 
-.library-footer .language-selection{
+.library-footer .language-selector {
     margin: 0 0 15px;
-    padding: 0 20px;
+    padding: 0 18px;
 }
 
-.language-selection button{
+.lang-btn {
     border-radius: 1.5rem;
     border: 2px solid #ffffff66;
     background: transparent;
@@ -222,13 +229,13 @@ body {
     gap: 5px;
 }
 
-.language-selection button:hover{
+.lang-btn:hover {
     transform: scale(1.05);
-    border: 2px solid #ffffff;
+    border-color: #ffffff;
 }
 
-.language-selection button:active{
-    border: 2px solid #ffffff66;
+.lang-btn:active {
+    border-color: #ffffff66;
 }
 
 .player-bar {
@@ -236,7 +243,7 @@ body {
     flex-shrink: 0;
 }
 
-.player-bar aside{
+.player-bar aside {
     margin: 0.5rem 0;
     background-image: linear-gradient(90deg, #af2896, #509bf5);
     border-radius: 0.5rem;
@@ -249,30 +256,32 @@ body {
     flex-shrink: 0;
 }
 
-.player-bar aside{
+.player-bar aside {
     margin: 0.5rem 0;
     background-image: linear-gradient(90deg, #af2896, #509bf5);
     border-radius: 0.5rem;
     height: 100%;
 }
 
-.player-bar .signup-bar{
+.player-bar .signup-bar {
     padding: 11px 24px 7px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .player-bar .signup-desc p:nth-of-type(1) {
     font-weight: 700;
     font-size: 14px;
 }
-.player-bar .signup-desc p{
+
+.player-bar .signup-desc p {
     margin: 0;
-    padding: 0;   
+    padding: 0;
     font-size: 15px;
 }
 
-.player-bar .signup-bar .signup-btn{
+.player-bar .signup-bar .signup-btn {
     padding: 16px 26px;
     border-radius: 2rem;
     font-weight: 800;

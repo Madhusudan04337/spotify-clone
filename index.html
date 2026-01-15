@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,0&icon_names=language" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,0&icon_names=language" />
 </head>
 
 <body>
@@ -39,8 +40,8 @@
                                     <span class="title">Create your first playlist</span><br>
                                     <span class="desc">it&apos;s easy, we&apos;ll help you</span>
                                 </div>
-                                <div class="playlist-add-btn">
-                                    <button><span>Create playlist</span></button>
+                                <div>
+                                    <button class="btn"><span>Create playlist</span></button>
                                 </div>
                             </div>
                             <div class="playlist">
@@ -49,31 +50,40 @@
                                     <span class="desc">We&apos;ll keep your updated on new episodes</span>
                                 </div>
                                 <div class="playlist-add-btn">
-                                    <button><span>Browse podcasts</span></button>
+                                    <button class="btn"><span>Browse podcasts</span></button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="library-footer">
-                        <div class="legal-links">
-                            <div class="links-container">
-                                <div class="link"><span>Legal</span></div>
-                                <div class="link"><span>Safety & Privacy Center</span></div>
-                                <div class="link"><span>Privacy Policy</span></div>
-                                <div class="link"><span>Cookies</span></div>
-                                <div class="link"><span>About ads</span></div>
-                                <div class="link"><span>Accessibility</span></div>
+
+                        <div class="footer-links">
+                            <div class="footer-links__list">
+                                <span class="footer-links__item">Legal</span>
+                                <span class="footer-links__item">Safety & Privacy Center</span>
+                                <span class="footer-links__item">Privacy Policy</span>
+                                <span class="footer-links__item">Cookies</span>
+                                <span class="footer-links__item">About ads</span>
+                                <span class="footer-links__item">Accessibility</span>
                             </div>
-                            <a draggable="false" class="Cookies" href="https://www.spotify.com/legal/cookies-policy/"
-                                target="_blank"><span>Cookies</span></a>
+
+                            <div>
+                                <a class="footer-links__external" href="https://www.spotify.com/legal/cookies-policy/"
+                                target="_blank" draggable="false">
+                                Cookies
+                            </a>
+                            </div>
                         </div>
-                        <div class="language-selection">
-                            <button>
+
+                        <div class="language-selector">
+                            <button class="lang-btn">
                                 <span class="material-symbols-outlined">language</span>
                                 <span>English</span>
                             </button>
                         </div>
+
                     </div>
+
                 </div>
             </div>
             <div class="content">
@@ -89,7 +99,7 @@
                         <p>Preview of Spotify</p>
                         <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
                     </div>
-                    <button class="signup-btn"><span>Sign up for free</span></button>
+                    <button class="btn btn--large"><span>Sign up for free</span></button>
                 </div>
             </aside>
         </div>
